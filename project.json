@@ -1,7 +1,7 @@
 {
   "name": "DB_Connection",
   "description": "Blank Process",
-  "main": "Main.xaml",
+  "main": "ConnectionDB.xaml",
   "dependencies": {
     "UiPath.Database.Activities": "[1.2.6863.32528]",
     "UiPath.Excel.Activities": "[2.7.2]",
