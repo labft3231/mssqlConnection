@@ -49,7 +49,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SelectData" sap:VirtualizedContainerService.HintSize="375.2,466.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SelectData" sap:VirtualizedContainerService.HintSize="375.2,594.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="ConnectionStatus" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_TestItems" />
@@ -70,5 +70,10 @@
       </ui:ExecuteQuery.Parameters>
     </ui:ExecuteQuery>
     <ui:WriteRange AddHeaders="False" DataTable="[dt_TestItems]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="output_DB.xlsx" />
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DisconnectDB workflow" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="DisconnectDB.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="in_ConnectionExist">[ConnectionStatus]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
   </Sequence>
 </Activity>
