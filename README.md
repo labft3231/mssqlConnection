@@ -11,9 +11,8 @@
 - Database 연결 해제를 수행. 
 - 기본적으로 DB사용 후 연결을 해제해줘야함.
 
-------------------
 
-#### 기본적인 쿼리(query) 필요 - 모든 쿼리(명령어) 실행 전에 DB Connection과 DB Disconnection이 필요함
+#### 기본적인 쿼리(query) 필요 - 모든 쿼리(명령어) 실행 전후로 DB Connection과 DB Disconnection이 필요함
 
 #### InsertData(Create)
 - Data 삽입
